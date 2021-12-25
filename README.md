@@ -13,7 +13,7 @@ After fully importing and setting up the package, open the `Playground` scene fo
 
 ## 2. Setup the interactable object
 1. Add an 3D Sphere named `PickupableBall`
-- connect a `Box Collider` component with `Is Trigger` ticked, and resize the collider size 3 on all axis to make the trigger area big enough to be detected by the player.
+- connect a `Box Collider` component with `Is Trigger` ticked, and resize the collider size 3 on all axis, this will act as an area where the interactable is avaliable to the player.
 
 ![Ball Setup](https://user-images.githubusercontent.com/79928221/147372733-85e9f7da-d52e-406f-83ce-3773dae722b9.PNG)
 
@@ -104,6 +104,8 @@ Your inspector setup for the interactable should look similar to this
   - Inside the input map goto the `Player` action map, then add a new action called `Interact`
   - Inside the new action add a binding set to the `E` key
 
+![InputMap Setup](https://user-images.githubusercontent.com/79928221/147373383-39bc9323-7bf9-4f49-8467-1b2034350384.PNG)
+
 - Next find and open the `StarterAssetsInputs` script again inside `Assets/StarterAssets/InputSystem`
   - Add a variable `public bool interact;`
 ```
@@ -177,6 +179,9 @@ public void Interact()
   - Again make sure to add 'using UnityEngine.Events;' to the top of the script to be able to use UnityEvents
 - Next add a new method `void Interact()`, inside adding `interactableMethod.Invoke()` to call its referenced method
 
+
 4. Finally we need to apply our newly created functionality to our player
 - First add the PlayerInteract script to our player game object
 - Next under the ThirdPersonController inspector properties on our player, find the InteractableMethod unity event property/variable we added to the component/script, select + and reference the Player object along with the Interact function/method
+
+![Player Setup](https://user-images.githubusercontent.com/79928221/147373583-3ba8aff1-0857-41bb-a393-03951b6c14aa.png)
