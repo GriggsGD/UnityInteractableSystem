@@ -6,7 +6,7 @@ This tutorial will explain how to develop a simple interactable system to be use
 
 To begin with download Unity's [Starter Assets - Third Person Character Controller](https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526).
 
-We will be using the scene ad player prefab included in this package to demonstrate this system's functionality.
+We will be using the scene and player prefab included in this package to demonstrate this system's functionality.
 
 After fully importing and setting up the package, open the `Playground` scene found inside `Assets/StarterAssets/ThirdPersonController/Scenes/` called `Playground.unity`. 
 
