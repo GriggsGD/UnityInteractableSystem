@@ -18,9 +18,8 @@ After fully importing and setting up the package, open the `Playground` scene fo
 ![Ball Setup](https://user-images.githubusercontent.com/79928221/147372733-85e9f7da-d52e-406f-83ce-3773dae722b9.PNG)
 
 
-2. Create a script called `PickupItem` we will be using this to add functionality on the interact of this object.
-- Inside the script make a `public void` method called `Pickup`, this will be used to set in the inspector of the Interactable script to be called on interact
-  - Inside the `Pickup` method add the functionality to be performed on interact, in this example will be simply destroying the object with `Destroy(gameObject);`
+2. Create a script called `PickupItem` we will be using this to script behaviour on the interact of this object.
+- Add the following code to the script, this will destroy the object when Pickup is called by the interact event
 ```
 public class PickupItem : MonoBehaviour
 {
@@ -185,3 +184,5 @@ public void Interact()
 - Next under the ThirdPersonController inspector properties on our player, find the InteractableMethod unity event property/variable we added to the component/script, select + and reference the Player object along with the Interact function/method
 
 ![Player Setup](https://user-images.githubusercontent.com/79928221/147373583-3ba8aff1-0857-41bb-a393-03951b6c14aa.png)
+
+Test by running the game, moving the player near the ball and pressing E to interact with it
